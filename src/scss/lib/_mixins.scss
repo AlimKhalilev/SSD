@@ -1,0 +1,273 @@
+// === Mixins [ Шаблоны классов стилей, используемых на всех страницах ]===
+
+// используется для одинаковых отступов внутри секций
+
+:root {
+    --section_indent: 6.25rem;
+    --header-min-height: 9rem;
+
+    @media ($media_sm) {
+        --section_indent: 2rem;
+    }
+}
+
+@mixin cursorPointer { // чтобы на смартфонах не было явного выделения элемента
+    cursor: pointer;
+
+    @media ($media_sm) {
+        cursor: initial;
+    }
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    background-color: $color_body_bg;
+    font-size: 16px;
+    color: $color_black_main;
+
+    @media ($media_xl) {
+        font-size: 15px;
+    }
+
+    @media ($media_sm) {
+        font-size: 16px;
+    }
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &.hideScroll {
+        overflow-y: hidden;
+    }
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+
+    &--burger {
+        z-index: 10;
+    }
+
+    &--modal {
+        z-index: 20;
+    }
+
+    &.visible {
+        visibility: visible;
+        opacity: 0.8;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.scroll-block-dummy {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+    visibility: hidden;
+}
+
+.section {
+    padding-top: var(--section_indent);
+
+    &--footer {
+        margin-top: auto;
+    }
+
+    &--underHeader {
+        margin-top: var(--header-min-height);
+    }
+
+    &--beforeFooter {
+        margin-bottom: var(--section_indent);
+    }
+}
+
+.bg-gradient {
+    background: linear-gradient(105.76deg, rgba(255, 255, 255, 0) 0%, #BAEEFF 100%);
+}
+
+.blockTitle {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 900;
+
+    @media ($media_sm) {
+        font-size: 1.8rem;
+    }
+}
+
+.imgMax {
+    max-width: 100%;
+}
+
+.card {
+    border-radius: 3rem;
+    background-color: $color_white;
+    box-shadow: $color_card_shadow;
+
+    &--tariffs {
+        position: relative;
+        overflow: hidden;
+
+        .card__content {
+            position: relative;
+        }
+
+        .card__header {
+            margin-bottom: 3.5rem;
+        }
+
+        .card__title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+
+    // .card__content
+
+    &__content {
+        padding: 2.2rem;
+
+        // .card__content--max
+
+        &--max {
+            padding: 3.125rem;
+        }
+
+    }
+
+    // .card__waves
+
+    &__waves {
+        
+        &::before, &::after {
+            content: "";
+            background-image: url("../img/card-wave.png");
+            position: absolute;
+
+            height: 19.5rem;
+            width: 8.4375rem;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+            transform: rotate(180deg);
+        }
+    }
+
+    // .card__info
+
+    &__info {
+        text-align: center;
+    }
+
+    // .card__picture
+
+    &__picture {
+
+    }
+
+    // .card__price
+
+    &__price {
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        display: inline-block;
+        margin: 2rem 0 1.5rem 0;
+    }
+
+    // .card__btn
+
+    &__btn {
+
+    }
+
+    // .card__detail
+
+    &__detail {
+        position: relative;
+        padding-bottom: 1rem;
+        margin-top: 1.5rem;
+        @include cursorPointer;
+
+        font-weight: 600;
+        font-size: 0.92rem;
+        
+        &::after {
+            position: absolute;
+            content: "";
+            background-image: url("../img/arrow_down_gray.svg");
+            background-size: cover;
+            width: 0.875rem;
+            height: 0.45rem;
+
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+    }
+
+    // .card__header
+
+    &__header {
+        margin-bottom: 2.1rem;
+    }
+
+    // .card__title
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.875rem;
+        text-align: center;
+    }
+
+    // .card__form
+
+    &__form {
+
+    }
+
+    // .card__field
+
+    &__field {
+        width: 28rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // .card__input
+
+    &__input {
+        width: 100%;
+    }
+}
+// === / Mixins ===

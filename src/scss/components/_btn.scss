@@ -1,0 +1,202 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: 32px;
+    padding: 0 1.5rem;
+    height: 2.75rem;
+    @include cursorPointer;
+    font-weight: 500;
+    line-height: 1;
+    transition: 0.3s ease-in-out;
+
+    color: $color_white;
+
+    .btn__icon {
+        fill: $color_white;
+    }
+
+    &__overlayIcon {
+        padding: 1rem;
+        border-radius: 50%;
+
+        display: flex;
+        background: $color_promo_btn_overlay;
+    }
+
+    &__text {
+
+    }
+
+    &__icon {
+        width: 1.2rem;
+        height: 1.2rem;
+
+        &--spaceLeft {
+            margin-left: 0.7rem;
+        }
+
+        &--spaceRight {
+            margin-right: 0.7rem;
+        }
+    }
+
+    &:hover, &:focus {
+        //box-shadow: 0px 18px 22px -13px rgba(202, 181, 181, 0.51);
+    }
+
+    &--promo {
+        border-radius: 8.5rem;
+        background-color: $color_white;
+        box-shadow: $color_btn_promo_shadow;
+        height: auto;
+        padding: 0.75rem;
+        color: $color_black_main;
+        font-weight: 600;
+        font-size: 1.4rem;
+
+        .btn__icon {
+            fill: $color_black_main;
+        }
+
+        .btn__text {
+            padding: 0 1.5rem;
+        }
+
+        &:hover {
+            background-color: $color_sky;
+        }
+    }
+
+    &--card {
+        background-color: $color_black_main;
+        height: 3.125rem;
+        padding: 0 2.5rem;
+    }
+
+    &--form {
+        background-color: $color_primary;
+        height: 3.75rem;
+        padding: 0 2.5rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+
+        justify-content: center;
+    }
+
+    &--social {
+        font-size: 1.125rem;
+        font-weight: 600;
+        border-radius: 1.625rem;
+        background-color: $color_white;
+        color: $color_black_main;
+        
+        .btn__icon {
+            fill: $color_black_main;
+        }
+    }
+
+    &--socialGradient {
+        background: $color_gradient_button;
+    }
+
+    &--primary {
+        background-color: $color_primary;
+
+        &:hover, &:focus {
+            background-color: darken($color_primary, 10%);
+            box-shadow: 0px 18px 22px -13px lighten($color_primary, 15%);
+        }
+    }
+
+    &--success {
+        background-color: $color_success;
+
+        &:hover, &:focus {
+            background-color: darken($color_success, 10%);
+            box-shadow: 0px 18px 22px -13px lighten($color_success, 15%);
+        }
+    }
+
+    &--warning {
+        background-color: $color_warning;
+
+        &:hover, &:focus {
+            background-color: darken($color_warning, 10%);
+            box-shadow: 0px 18px 22px -13px lighten($color_warning, 15%);
+        }
+    }
+
+    &--bordered {
+        background-color: $color_white;
+        border: 2px solid;
+
+        &_primary {
+            border-color: $color_primary;
+            color: $color_primary;
+    
+            .btn__icon {
+                fill: $color_primary;
+            }
+    
+            &:hover, &:focus {
+                box-shadow: 0px 18px 22px -13px lighten($color_primary, 15%);
+            }
+        }
+
+        &_success {
+            border-color: $color_success;
+            color: $color_success;
+    
+            .btn__icon {
+                fill: $color_success;
+            }
+    
+            &:hover, &:focus {
+                box-shadow: 0px 18px 22px -13px lighten($color_success, 15%);
+            }
+        }
+
+    }
+
+    &--transparent {
+        background-color: transparent;
+        
+        &:hover, &:focus {
+            box-shadow: unset;
+        }
+
+        &_primary {
+            color: $color_primary;
+
+            &:hover, &:focus {
+                color: darken($color_primary, 10%);
+            }
+        }
+
+        &_danger {
+            color: $color_danger;
+
+            &:hover, &:focus {
+                color: darken($color_danger, 10%);
+            }
+        }
+
+        &_success {
+            color: $color_success;
+            
+            &:hover, &:focus {
+                color: darken($color_success, 10%);
+            }
+        }
+    }
+
+    &:disabled {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+}

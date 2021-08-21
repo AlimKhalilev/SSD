@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "starterGulp - Main Page"
+		})
+
+	</head>
+	<body>
+
+		<div class="bg-gradient">
+
+			@@include("_header.html", {
+				"main": "menu__item--active"
+			})
+	
+			<section class="section section--underHeader main">
+				<div class="section__inner main__container">
+					<div class="main__content">
+						<h1 class="main__title blockTitle">Ваш бизнес <span class="main__accent">взлетит,</span><br> как ракета</h1>
+						<p class="main__description">А мы вам с этим поможем</p>
+						<div class="main__btn">
+							<a href="#" class="btn btn--promo">
+								<div class="btn__overlayIcon">
+									<svg class='icon icon-arrow-right btn__icon'><use xlink:href='img/sprite.svg#arrow-right'></use></svg>
+								</div>
+								<span class="btn__text">Оставить заявку</span>
+							</a>
+						</div>
+					</div>
+					<div class="main__img">
+						<img class="imgMax" src="./img/promo-img.png" alt="Человек летит на ракете">
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<section class="section tariffs">
+			<div class="section__inner">
+				<div class="tariffs__header">
+					<h2 class="blockTitle">Тарифы</h2>
+				</div>
+				<div class="tariffs__cards">
+
+					<div class="card card--tariffs">
+						<div class="card__waves"></div>
+						<div class="card__content card__content--max">
+							<div class="card__header">
+								<h3 class="card__title">Лэндинг</h3>
+							</div>
+							<div class="card__info">
+								<div class="card__picture">
+									<img class="imgMax" src="./img/tariffs-1.png" alt="Ракета">
+								</div>
+								<span class="card__price">от 20.000 ₽ </span>
+								<div class="card__btn">
+									<a href="#" class="btn btn--card">
+										<span class="btn__text">ОФОРМИТЬ ЗАКАЗ</span>
+									</a>
+								</div>
+								<div class="card__detail">
+									ПОДРОБНЕЕ
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card card--tariffs">
+						<div class="card__waves"></div>
+						<div class="card__content card__content--max">
+							<div class="card__header">
+								<h3 class="card__title">Сайт-визитка</h3>
+							</div>
+							<div class="card__info">
+								<div class="card__picture">
+									<img class="imgMax" src="./img/tariffs-2.png" alt="Ракета">
+								</div>
+								<span class="card__price">от 25.000 ₽ </span>
+								<div class="card__btn">
+									<a href="#" class="btn btn--card">
+										<span class="btn__text">ОФОРМИТЬ ЗАКАЗ</span>
+									</a>
+								</div>
+								<div class="card__detail">
+									ПОДРОБНЕЕ
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card card--tariffs">
+						<div class="card__waves"></div>
+						<div class="card__content card__content--max">
+							<div class="card__header">
+								<h3 class="card__title">Лэндинг-PRO</h3>
+							</div>
+							<div class="card__info">
+								<div class="card__picture">
+									<img class="imgMax" src="./img/tariffs-3.png" alt="Ракета">
+								</div>
+								<span class="card__price">от 40.000 ₽ </span>
+								<div class="card__btn">
+									<a href="#" class="btn btn--card">
+										<span class="btn__text">ОФОРМИТЬ ЗАКАЗ</span>
+									</a>
+								</div>
+								<div class="card__detail">
+									ПОДРОБНЕЕ
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		
+
+		<section class="section section--beforeFooter scrollBlock">
+			<div class="section__inner scrollBlock__inner">
+				<div class="scrollBlock__preview">Это блок скролла</div>
+			</div>
+		</section>
+
+		@@include("_footer.html")
+
+	</body>
+</html>

@@ -1,0 +1,128 @@
+@import "./lib/normalize";
+@import "./lib/colors";
+@import "./lib/grid";
+@import "./lib/fonts";
+@import "./lib/lightslider";
+//@import "./lib/animate";
+@import "./lib/mixins";
+@import "./lib/burger";
+@import "./lib/sprite"; // общий стиль иконок
+@import "./sprite/icons"; // стили иконок, которые генерируются автоматически
+@import "./lib/components";
+
+/* СТИЛИ КОМПОНЕНТОВ (первая буква c- означает custom) */
+
+@import "./components/btn";
+@import "./components/link";
+@import "./components/c-checkbox";
+@import "./components/c-field";
+@import "./components/c-select";
+@import "./components/c-details";
+@import "./components/с-dropdown";
+
+@import "modal";
+@import "header";
+@import "footer";
+
+.main {
+    padding: 3rem 0;
+    min-height: calc(100vh - var(--header-min-height));
+
+    // .main__container
+
+    &__container {
+        display: flex;
+    }
+
+    // .main__content
+
+    &__content {
+        flex-basis: 100%;
+        padding-bottom: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    // .main__title
+
+    &__title {
+        text-align: left;
+    }
+
+    // .main__accent
+
+    &__accent {
+        color: $color_info;
+    }
+
+    // .main__description
+
+    &__description {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: inline-block;
+        margin: 1.8rem 0 2.8rem 0;
+    }
+
+    // .main__btn
+
+    &__btn {
+
+    }
+
+    // .main__img
+
+    &__img {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+.tariffs {
+
+    // .tariffs__header
+
+    &__header {
+        margin-bottom: 4.2rem;
+    }
+
+    // .tariffs__cards
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.scrollBlock {
+
+    // .scrollBlock__inner
+
+    &__inner {
+
+    }
+
+    // .scrollBlock__preview
+
+    &__preview {
+        background-color: $color_primary;
+        color: $color_white;
+        font-size: 1rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 0;
+    }
+}

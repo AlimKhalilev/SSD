@@ -99,6 +99,51 @@
         }
     }
 
+    &--textRounded {
+        height: 5rem;
+        padding: 0 1rem;
+        border-radius: 2.5rem;
+        box-shadow: $color_card_shadow;
+        background-color: $color_white;
+
+        .btn__text {
+            font-weight: 800;
+            font-size: 1.9rem;
+            line-height: 1.25;
+            color: $color_primary;
+            display: flex;
+            height: 3rem;
+            width: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn__descr {
+            transition: 0.3s ease-in-out;
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding: 0 1.5rem;
+            display: inline-block;
+            color: $color_black_main;
+            white-space: nowrap;
+        }
+    }
+
+    &--aloneRounded {
+        height: auto;
+        padding: 0.8rem;
+        border-radius: 50%;
+        box-shadow: $color_card_shadow;
+        background-color: $color_white;
+
+        .btn__icon {
+            width: 1.6rem;
+            height: 1.6rem;
+
+            fill: $color_primary;
+        }
+    }
+
     &--socialGradient {
         background: $color_gradient_button;
     }

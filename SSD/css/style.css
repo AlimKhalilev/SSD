@@ -1695,12 +1695,11 @@ body.hideScroll {
 }
 
 .btn--textRounded .btn__descr {
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   font-weight: 600;
   font-size: 1.25rem;
-  padding: 0 1.5rem;
   display: inline-block;
   color: #00162C;
   white-space: nowrap;
@@ -2590,6 +2589,19 @@ body.hideScroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.choose__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2597,30 +2609,69 @@ body.hideScroll {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 100%;
 }
 
-.choose__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.choose__col--left {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
-.choose__row--space .btn:first-child {
+.choose__col--left .choose__elem .btn {
+  right: 0;
+}
+
+.choose__col--right {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.choose__elem {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+}
+
+.choose__elem--spaceRight {
+  -webkit-transform: translateX(7rem);
+      -ms-transform: translateX(7rem);
+          transform: translateX(7rem);
+}
+
+.choose__elem--spaceLeft {
   -webkit-transform: translateX(-7rem);
       -ms-transform: translateX(-7rem);
           transform: translateX(-7rem);
 }
 
-.choose__row--space .btn:last-child {
-  -webkit-transform: translateX(7rem);
-      -ms-transform: translateX(7rem);
-          transform: translateX(7rem);
+.choose__elem .btn {
+  position: absolute;
+  overflow: hidden;
+}
+
+.choose__elem .btn__descr {
+  text-align: left;
+  -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+.choose__elem .btn__descr.hidden {
+  width: 0;
+}
+
+.choose__elem .btn__descr.show {
+  width: calc(var(--width) + 30px);
+}
+
+.choose__elem:hover .btn__descr {
+  width: calc(var(--width) + 30px);
 }
 
 .scrollBlock__preview {

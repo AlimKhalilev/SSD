@@ -335,6 +335,82 @@
     }
 }
 
+.portfolio {
+
+    // .portfolio__header
+
+    &__header {
+        margin-bottom: 5rem;
+    }
+
+    // .portfolio__name
+
+    &__name {
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    // .portfolio__container
+
+    &__container {
+        
+    }
+
+    // .portfolio__overlay
+
+    &__overlay {
+        padding: 0.8rem;
+    }
+
+    // .portfolio__item
+
+    &__item {
+        background: $color_white;
+        box-shadow: 0px 8px 11px $color_promo_btn_overlay;
+        border-radius: 5rem;
+        padding: 0.9rem;
+    }
+
+    // .portfolio__picture
+
+    &__picture {
+        max-height: 35rem;
+        border-radius: 3.8rem;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar-track
+        {
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.56);
+        }
+
+        &::-webkit-scrollbar
+        {
+            width: 12px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            background-color: rgb(177, 177, 177);
+        }
+
+        img {
+            border-radius: 3.8rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
 
 
 

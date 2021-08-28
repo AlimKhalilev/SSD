@@ -998,17 +998,21 @@ ul {
   cursor: grabbing;
 }
 
+.lSPager {
+  display: none;
+}
+
 .lSSlideOuter {
   position: relative;
   overflow: visible;
 }
 
 .lSAction > a {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.35rem;
+  height: 3.35rem;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 7px rgba(54, 183, 255, 0.25);
+          box-shadow: 0px 0px 7px rgba(54, 183, 255, 0.25);
   border-radius: 50%;
   opacity: 1;
   z-index: 0;
@@ -1031,7 +1035,8 @@ ul {
 }
 
 .lSAction > a:hover {
-  background-color: #fafafa;
+  -webkit-box-shadow: 0px 0px 12px rgba(54, 183, 255, 0.25);
+          box-shadow: 0px 0px 12px rgba(54, 183, 255, 0.25);
 }
 
 .lSAction > .lSPrev,
@@ -1042,11 +1047,11 @@ ul {
 .lSAction > .lSPrev {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  left: -3rem;
+  left: -4rem;
 }
 
 .lSAction > .lSNext {
-  right: -3rem;
+  right: -4rem;
 }
 
 .lSSlideOuter .lSPager.lSpg > li a {
@@ -2672,6 +2677,54 @@ body.hideScroll {
 
 .choose__elem:hover .btn__descr {
   width: calc(var(--width) + 30px);
+}
+
+.portfolio__header {
+  margin-bottom: 5rem;
+}
+
+.portfolio__name {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.portfolio__overlay {
+  padding: 0.8rem;
+}
+
+.portfolio__item {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 8px 11px rgba(186, 238, 255, 0.32);
+          box-shadow: 0px 8px 11px rgba(186, 238, 255, 0.32);
+  border-radius: 5rem;
+  padding: 0.9rem;
+}
+
+.portfolio__picture {
+  max-height: 35rem;
+  border-radius: 3.8rem;
+  overflow-y: auto;
+}
+
+.portfolio__picture::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.portfolio__picture::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.portfolio__picture::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #b1b1b1;
+}
+
+.portfolio__picture img {
+  border-radius: 3.8rem;
 }
 
 .scrollBlock__preview {

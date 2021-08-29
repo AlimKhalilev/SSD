@@ -51,6 +51,14 @@
         text-align: left;
     }
 
+    // .main__rocket
+
+    &__rocket {
+        @media ($media_sm) {
+            max-width: 100%;
+        }
+    }
+
     // .main__accent
 
     &__accent {
@@ -60,10 +68,10 @@
     // .main__description
 
     &__description {
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: 1.875rem;
+        font-weight: 600;
         display: inline-block;
-        margin: 1.8rem 0 2.8rem 0;
+        margin: 1.9rem 0 2.9rem 0;
     }
 
     // .main__btn

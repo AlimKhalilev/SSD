@@ -1076,7 +1076,7 @@ ul {
 }
 
 :root {
-  --section_indent: 6.25rem;
+  --section_indent: 7rem;
   --header-min-height: 9rem;
 }
 
@@ -1210,7 +1210,7 @@ body.hideScroll {
 
 .card--stages .card__header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card--stages .card__title {
@@ -1514,6 +1514,11 @@ body.hideScroll {
 }
 
 .icon-whatsapp {
+  font-size: 1.25rem;
+  width: 1em;
+}
+
+.icon-whatsapp-contact {
   font-size: 1.45rem;
   width: 1em;
 }
@@ -1583,7 +1588,7 @@ body.hideScroll {
   text-decoration: none;
   border-radius: 32px;
   padding: 0 1.5rem;
-  height: 2.75rem;
+  height: 3rem;
   cursor: pointer;
   font-weight: 500;
   line-height: 1;
@@ -2462,10 +2467,10 @@ body.hideScroll {
 }
 
 .main__description {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.875rem;
+  font-weight: 600;
   display: inline-block;
-  margin: 1.8rem 0 2.8rem 0;
+  margin: 1.9rem 0 2.9rem 0;
 }
 
 .main__img {
@@ -2918,6 +2923,10 @@ body.hideScroll {
 
   .menu__item:not(:last-child) {
     margin: 0 0 0.5rem 0;
+  }
+
+  .main__rocket {
+    max-width: 100%;
   }
 
   .tariffs__cards {

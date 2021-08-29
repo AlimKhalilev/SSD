@@ -3,7 +3,7 @@
 // используется для одинаковых отступов внутри секций
 
 :root {
-    --section_indent: 6.25rem;
+    --section_indent: 7rem;
     --header-min-height: 9rem;
 
     @media ($media_sm) {
@@ -149,7 +149,7 @@ html, body {
 
         .card__header {
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .card__title {

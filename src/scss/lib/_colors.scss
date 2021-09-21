@@ -1,6 +1,6 @@
 // [[ Цвета, используемые в проекте. Должны начинаться с $color_ ]]
 
-$color_black_main: #00162C;
+$color_black_main: #313131;
 $color_body_bg: #fff;
 $color_header: #fff;
 $color_primary: #38b7ff;
@@ -11,7 +11,7 @@ $color_warning: #F3B63F;
 $color_success: #199F27;
 $color_info: #38b7ff;
 $color_secondary: #929398;
-$color_dark: #373943;
+$color_dark: #002345;
 $color_white: #FFFFFF;
 
 $color_sky: #BAEEFF;
@@ -23,8 +23,8 @@ $color_card_shadow: 0px 6px 12px rgba(54, 183, 255, 0.25);
 $color_navlink_shadow: 0px 3px 4px rgba(186, 238, 255, 0.32);
 $color_promo_btn_overlay: rgba(186, 238, 255, 0.32);
 
-$color_burger_show: #222222;
-$color_burger_close: #666666;
+$color_burger_show: $color_dark;
+$color_burger_close: $color_black_main;
 
-$color_slider_dot: #ffa3a3;
-$color_slider_dot_active: #813b3b;
+$color_slider_dot: rgba(54, 183, 255, 0.3);
+$color_slider_dot_active: rgba(54, 183, 255, 0.8);

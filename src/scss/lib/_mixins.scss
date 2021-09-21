@@ -8,6 +8,7 @@
 
     @media ($media_sm) {
         --section_indent: 4rem;
+        --header-min-height: 6rem;
     }
 }
 
@@ -31,7 +32,7 @@ html, body {
     }
 
     @media ($media_sm) {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     min-height: 100vh;
@@ -135,6 +136,10 @@ html, body {
 
         .card__header {
             margin-bottom: 3.5rem;
+
+            @media ($media_sm) {
+                margin-bottom: 1.5rem;
+            }
         }
 
         .card__title {
@@ -155,6 +160,11 @@ html, body {
         .card__title {
             font-size: 1.25rem;
             font-weight: 600;
+
+            @media ($media_sm) {
+                font-size: 1.15rem;
+                padding: 0 2rem;
+            }
         }
     }
 
@@ -205,17 +215,17 @@ html, body {
             padding: 3.125rem;
 
             @media ($media_sm) {
-                padding: 2.5rem;
+                padding: 2.5rem 2rem;
             }
         }
 
         // .card__content--min
 
         &--min {
-            padding: 1.4rem 2.2rem;
+            padding: 1.4rem 3rem 4rem 3rem;
 
             @media ($media_sm) {
-                padding: 2rem;
+                padding: 3.5rem 1rem;
             }
         }
 
@@ -232,6 +242,13 @@ html, body {
 
             height: 19.5rem;
             width: 8.4375rem;
+            background-size: 100%;
+
+            @media ($media_sm) {
+                height: 10.83rem;
+                width: 4.6875rem;
+                background-size: 100%;
+            }
         }
 
         &::before {
@@ -270,6 +287,10 @@ html, body {
 
     &__description {
         line-height: 1.7;
+
+        @media ($media_sm) {
+            font-size: 0.9rem;
+        }
     }
 
     // .card__number
@@ -279,7 +300,7 @@ html, body {
         font-size: 1.9rem;
         line-height: 1.25;
         color: $color_primary;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.4rem;
         display: inline-block;
 
         /* фыф */
@@ -290,7 +311,10 @@ html, body {
     // .card__picture
 
     &__picture {
-
+        @media ($media_sm) {
+            max-width: 6rem;
+            margin: 0 auto;
+        }
     }
 
     // .card__price

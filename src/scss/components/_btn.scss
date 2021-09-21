@@ -28,7 +28,9 @@
     }
 
     &__text {
-
+        @media ($media_sm) {
+            font-size: 1.1rem;
+        }
     }
 
     &__icon {
@@ -72,9 +74,16 @@
     }
 
     &--card {
-        background-color: $color_black_main;
+        background-color: $color_primary;
         height: 3.125rem;
         padding: 0 2.5rem;
+
+        @media ($media_sm) {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+            justify-content: center;
+        }
     }
 
     &--form {
@@ -125,6 +134,10 @@
             display: inline-block;
             color: $color_black_main;
             white-space: nowrap;
+
+            @media ($media_sm) {
+                font-size: 0.9rem;
+            }
         }
     }
 

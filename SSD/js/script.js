@@ -116,7 +116,7 @@ function initSlider() {
     // data-slider="4,2,1" (СТРОКА, ГДЕ ЧИСЛА ЧЕРЕЗ ЗАПЯТУЮ БЕЗ ПРОБЕЛОВ: число элементов на компе, на планшете, на мобилках)
 
     let screen_xs = 576; // mobile
-    let screen_sm = 768; // mobile-reverse
+    let screen_sm = 1268; // notebooks
 
     $("[data-slider]").each(function(_, elem) {
         let items = elem.dataset.slider.split(",");
@@ -391,20 +391,18 @@ adaptImg();
 
     function openChooseButtons(chooseButtons) {
         chooseButtons.forEach((button, i) => {
-            setTimeout(() => {
-                button.classList.add("show");
-            }, ((i+1) * 700))
+            button.classList.add("show");
         });
     }
 
     const chooseButtons = document.querySelectorAll(".choose__elem .btn__descr");
 
     chooseButtons.forEach(item => {
-        item.style.setProperty('--width', `${item.clientWidth}px`);
+        //item.style.setProperty('--width', `${item.clientWidth}px`);
         item.classList.add("hidden");
     });
 
-    let isChooseSectionScrolled = false;
+    let isChooseSectionScrolled = false; // работает или не работает (false работает)
 
     $(document).scroll(function () {
         let scrollPos = $(window).scrollTop();

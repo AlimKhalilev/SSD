@@ -45,20 +45,18 @@ $(document).ready(function() {
 
     function openChooseButtons(chooseButtons) {
         chooseButtons.forEach((button, i) => {
-            setTimeout(() => {
-                button.classList.add("show");
-            }, ((i+1) * 700))
+            button.classList.add("show");
         });
     }
 
     const chooseButtons = document.querySelectorAll(".choose__elem .btn__descr");
 
     chooseButtons.forEach(item => {
-        item.style.setProperty('--width', `${item.clientWidth}px`);
+        //item.style.setProperty('--width', `${item.clientWidth}px`);
         item.classList.add("hidden");
     });
 
-    let isChooseSectionScrolled = false;
+    let isChooseSectionScrolled = false; // работает или не работает (false работает)
 
     $(document).scroll(function () {
         let scrollPos = $(window).scrollTop();

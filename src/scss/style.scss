@@ -32,6 +32,10 @@
 
     &__container {
         display: flex;
+
+        @media ($media_sm) {
+            flex-direction: column-reverse;
+        }
     }
 
     // .main__content
@@ -43,12 +47,23 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media ($media_sm) {
+            align-items: center;
+            text-align: center;
+            margin-top: 2rem;
+        }
     }
 
     // .main__title
 
     &__title {
         text-align: left;
+
+        @media ($media_sm) {
+            text-align: center;
+            font-size: 1.9rem;
+        }
     }
 
     // .main__rocket
@@ -72,6 +87,10 @@
         font-weight: 600;
         display: inline-block;
         margin: 1.9rem 0 2.9rem 0;
+
+        @media ($media_sm) {
+            font-size: 1.3rem;
+        }
     }
 
     // .main__btn
@@ -85,6 +104,10 @@
     &__img {
         flex-basis: 100%;
         text-align: center;
+
+        @media ($media_sm) {
+            padding: 0 5rem; 
+        }
     }
 }
 
@@ -94,21 +117,26 @@
 
     &__header {
         margin-bottom: 4.2rem;
+
+        @media ($media_sm) {
+            margin-bottom: 2.5rem;
+        }
     }
 
     // .tariffs__cards
 
     &__cards {
         display: flex;
-        justify-content: space-between;
+    }
 
-        @media ($media_sm) {
-            flex-direction: column;
+    &__card {
+        padding: 0.9rem;
 
-            .card {
-                &:not(:last-child) {
-                    margin-bottom: 2rem;
-                }
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+
+            @media ($media_sm) {
+                margin-right: 0;
             }
         }
     }
@@ -147,7 +175,8 @@
         line-height: 1.25;
 
         @media ($media_sm) {
-            font-size: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
         }
     }
 
@@ -155,6 +184,10 @@
 
     &__items {
         margin-top: 3rem;
+
+        @media ($media_sm) {
+            text-align: center;
+        }
     }
 
     // .contacts__item
@@ -201,37 +234,44 @@
     // .stages__container
 
     &__container {
+        padding: 0 6rem;
+
+        @media ($media_lg) {
+            padding: 0;
+        }
     }
 
     // .stages__header
 
     &__header {
         margin-bottom: 5rem;
+
+        @media ($media_sm) {
+            margin-bottom: 2.5rem;
+        }
     }
 
     // .stages__cards
 
     &__cards {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        grid-gap: 1.7rem;
+    }
 
-        @media ($media_sm) {
-            flex-direction: column;
+    // .stages__card
+
+    &__card {
+        padding: 0.9rem;
+
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+
+            @media ($media_sm) {
+                margin-right: 0;
+            }
         }
 
         .card {
-            flex-basis: calc(36% - 1.7rem);
-            min-height: 19.5rem;
-
-            @media ($media_sm) {
-                flex-basis: 100%;
-            }
-
-            &--min {
-                flex-basis: calc(28% - 1.7rem);
-            }
+            height: 100%;
         }
     }
 }
@@ -243,6 +283,10 @@
 
     &__header {
         margin-bottom: 12rem;
+
+        @media ($media_sm) {
+            margin-bottom: 3rem;
+        }
     }
 
     // .choose__container
@@ -255,9 +299,13 @@
 
     &__img {
         text-align: center;
+
+        @media ($media_sm) {
+            margin: 0 4rem;
+        }
         
         img {
-            width: 28.125rem;
+            max-width: 100%;            
         }
     }
 
@@ -276,6 +324,21 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
+
+        @media ($media_xl) {
+            width: 33rem;
+        }
+
+        @media ($media_sm) {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        @media ($media_sm) {
+            position: static;
+            flex-direction: column;
+            transform: unset;
+        }
     }
 
     // .choose__col
@@ -290,15 +353,31 @@
             align-items: flex-start;
             flex-direction: column-reverse;
 
+            @media ($media_sm) {
+                flex-direction: column;
+            }
+
             .choose__elem {
                 .btn {
                     right: 0;
+
+                    @media ($media_sm) {
+                        right: unset;
+                    }
                 }
             }
         }
 
         &--right {
             align-items: flex-end;
+
+            @media ($media_sm) {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media ($media_sm) {
+            align-items: flex-start;
         }
     }
 
@@ -309,17 +388,35 @@
         height: 5rem;
         width: 5rem;
 
+        @media ($media_sm) {
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+
         &--spaceRight {
             transform: translateX(7rem);
+
+            @media ($media_sm) {
+                transform: translateX(0);
+            }
         }
 
         &--spaceLeft {
             transform: translateX(-7rem);
+
+            @media ($media_sm) {
+                transform: translateX(0);
+            }
         }
 
         .btn {
             position: absolute;
             overflow: hidden;
+
+            @media ($media_sm) {
+                width: calc(100vw - 3rem);
+            }
         }
 
         .btn__descr {
@@ -332,12 +429,22 @@
 
             &.show {
                 width: calc(var(--width) + 30px);
+
+                @media ($media_sm) {
+                    min-width: calc(var(--width) - 30px);
+                    width: calc(var(--width) - 30px);
+                }
             }
         }
 
         &:hover {
             .btn__descr {
                 width: calc(var(--width) + 30px);
+
+                @media ($media_sm) {
+                    min-width: calc(var(--width) - 30px);
+                    width: calc(var(--width) - 30px);
+                }
             }
         }
     }
@@ -349,6 +456,10 @@
 
     &__header {
         margin-bottom: 5rem;
+
+        @media ($media_sm) {
+            margin-bottom: 2.5rem;
+        }
     }
 
     // .portfolio__name
@@ -358,6 +469,11 @@
         font-size: 1.5rem;
         text-align: center;
         padding: 1rem 0;
+
+        @media ($media_sm) {
+            font-size: 1rem;
+        }
+        
     }
 
     // .portfolio__container
@@ -379,6 +495,10 @@
         box-shadow: 0px 8px 11px $color_promo_btn_overlay;
         border-radius: 5rem;
         padding: 0.9rem;
+
+        @media ($media_sm) {
+            border-radius: 1.2rem;
+        }
     }
 
     // .portfolio__picture
@@ -387,6 +507,11 @@
         max-height: 35rem;
         border-radius: 3.8rem;
         overflow-y: auto;
+
+        @media ($media_sm) {
+            border-radius: 1.2rem;
+            max-height: 10rem;
+        }
 
         &::-webkit-scrollbar-track
         {
@@ -407,7 +532,7 @@
         }
 
         img {
-            border-radius: 3.8rem;
+            border-radius: inherit;
         }
     }
 }

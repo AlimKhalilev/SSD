@@ -4,7 +4,7 @@ function initSlider() {
     // data-slider="4,2,1" (СТРОКА, ГДЕ ЧИСЛА ЧЕРЕЗ ЗАПЯТУЮ БЕЗ ПРОБЕЛОВ: число элементов на компе, на планшете, на мобилках)
 
     let screen_xs = 576; // mobile
-    let screen_sm = 768; // mobile-reverse
+    let screen_sm = 1268; // notebooks
 
     $("[data-slider]").each(function(_, elem) {
         let items = elem.dataset.slider.split(",");

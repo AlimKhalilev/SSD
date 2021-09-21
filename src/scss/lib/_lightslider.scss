@@ -401,10 +401,10 @@
 // ===== КНОПКИ ВНИЗУ СЛАЙДЕРА ========== //
 
 .lSPager {
-    display: none;
+    //display: none;
 
     @media ($media_sm) {
-        display: none;
+        //display: none;
     }
 }
 
@@ -446,9 +446,9 @@
     margin-top: -1.7rem;
 
     @media ($media_xs) {
-        width: 1.7rem;
-        height: 1.7rem;
-        background-size: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: 30%;
     }
 
     &:hover {
@@ -467,7 +467,7 @@
         left: -2.8rem;
     }
     @media ($media_xs) {
-        left: -2rem;
+        left: -2.8rem;
     }
 }
 
@@ -477,20 +477,23 @@
         right: -2.8rem;
     }
     @media ($media_xs) {
-        right: -2rem;
+        right: -2.8rem;
     }
 }
 
 .lSSlideOuter .lSPager.lSpg > li a {
     background-color: $color_slider_dot;
-    border-radius: 0.5rem;
-    height: 0.625rem;
-    width: 1.75rem;
+    border-radius: 50%;
+    height: 0.45rem;
+    width: 0.45rem;
+    border: 4px solid transparent;
+
     z-index: 0;
 }
 
 .lSSlideOuter .lSPager.lSpg>li.active a, .lSSlideOuter .lSPager.lSpg>li:hover a {
     background-color: $color_slider_dot_active;
+    border-color: $color_slider_dot_active;
 }
 
 .lSSlideOuter .lSPager.lSpg {

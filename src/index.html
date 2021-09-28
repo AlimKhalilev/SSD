@@ -324,13 +324,13 @@
 							<div class="contacts__item">
 								<h4 class="contacts__subtitle">Напишите нам:</h4>
 								<div class="contacts__value">
-									<a href="#" class="btn btn--aloneRounded">
+									<a href="https://tlgg.ru/Shark_SD" class="btn btn--aloneRounded">
 										<svg class='btn__icon icon icon-telegram'><use xlink:href='img/sprite.svg#telegram'></use></svg>
 									</a>
-									<a href="#" class="btn btn--aloneRounded">
+									<a href="https://wa.me/79787519068?text=Привет%2C+я+по+поводу+сайта" class="btn btn--aloneRounded">
 										<svg class='btn__icon icon icon-whatsapp-contact'><use xlink:href='img/sprite.svg#whatsapp-contact'></use></svg>
 									</a>
-									<a href="#" class="btn btn--aloneRounded">
+									<a href="https://viber.click/79787519068" class="btn btn--aloneRounded">
 										<svg class='btn__icon icon icon-viber'><use xlink:href='img/sprite.svg#viber'></use></svg>
 									</a>
 
@@ -344,20 +344,20 @@
 								<div class="card__header">
 									<h3 class="card__title">Оставьте заявку </h3>
 								</div>
-								<div class="card__form">
+								<form class="card__form">
 									<div class="card__field">
 										<label class="card__input c-field">
-											<input class="c-field__input" type="text" placeholder="Имя" />
+											<input class="c-field__input" type="text" placeholder="Имя" required/>
 										</label>
 									</div>
 									<div class="card__field">
 										<label class="card__input c-field">
-											<input class="c-field__input" type="email" placeholder="Email" />
+											<input class="c-field__input" type="email" placeholder="Email" required/>
 										</label>
 									</div>
 									<div class="card__field">
 										<label class="card__input c-field">
-											<input class="c-field__input" type="tel" placeholder="Телефон" />
+											<input class="c-field__input input_number" type="tel" placeholder="Телефон" required/>
 										</label>
 									</div>
 									<div class="card__field">
@@ -365,7 +365,9 @@
 											<span class="btn__text">Отправить заявку</span>
 										</button>
 									</div>
-								</div>
+								</form>
+
+								<!-- <button data-modal="modal_success">Модалка</button> -->
 							</div>
 						</div>
 					</div>

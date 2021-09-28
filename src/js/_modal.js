@@ -41,6 +41,33 @@ function initModal() {
     document.querySelectorAll("[data-closeModal]").forEach(item => {
         item.addEventListener("click", () => closeModal());
     });
+
+    document.querySelectorAll(".card__form").forEach(form => {
+        inputs = form.querySelectorAll(".c-field__input");
+        
+        form.addEventListener("submit", function(e) {
+            console.log("Отправка формы");
+
+            $.post("./ajax.php",
+            {
+                act: "send",
+                name: inputs[0].value,
+                mail: inputs[1].value,
+                number: inputs[2].value
+            },
+            function (result) {
+                if (result) {
+                    showModal("modal_success");
+                }
+                else {
+                    console.log("Ошибка соединения с сервером!");
+                }
+            });
+
+            e.preventDefault();
+        });
+    });
+
 }
 
 initModal();

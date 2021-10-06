@@ -66,6 +66,10 @@
 
     &__content {
         text-align: center;
+
+        .card__field {
+            max-width: 100%;
+        }
     }
 
     // .modal__img

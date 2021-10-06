@@ -101,7 +101,8 @@ $(document).ready(function() {
                 act: "send",
                 name: inputs[0].value,
                 mail: inputs[1].value,
-                number: inputs[2].value
+                number: inputs[2].value,
+                from: inputs[3].value
             },
             function (result) {
                 if (result) {
@@ -446,5 +447,16 @@ adaptImg();
     });
 
     $(".input_number").mask("+7 (999) 999 99-99");
+
+    // Меняем тему контактной формы в модалке (где секция "Тарифы")
+
+    let tariffsThemes = document.querySelectorAll("[data-formChangeTheme]");
+    let modalContactTheme = document.querySelector("#modal_mail .themeFrom");
+
+    tariffsThemes.forEach(item => {
+        item.addEventListener("click", function() {
+            modalContactTheme.setAttribute("value", item.dataset.formchangetheme);
+        });
+    });
 
 });

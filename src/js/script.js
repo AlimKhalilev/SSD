@@ -74,4 +74,15 @@ $(document).ready(function() {
 
     $(".input_number").mask("+7 (999) 999 99-99");
 
+    // Меняем тему контактной формы в модалке (где секция "Тарифы")
+
+    let tariffsThemes = document.querySelectorAll("[data-formChangeTheme]");
+    let modalContactTheme = document.querySelector("#modal_mail .themeFrom");
+
+    tariffsThemes.forEach(item => {
+        item.addEventListener("click", function() {
+            modalContactTheme.setAttribute("value", item.dataset.formchangetheme);
+        });
+    });
+
 });

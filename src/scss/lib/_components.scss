@@ -51,7 +51,8 @@
 .content-box {
     padding: 0.7rem;
     font-weight: 500;
-    border: 1px solid #ffa494;
+    border: 1px solid $color_primary;
+    line-height: 1.5;
     border-radius: 0.5rem;
     background-color: $color_white;
 }

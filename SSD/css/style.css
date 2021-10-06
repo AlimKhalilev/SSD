@@ -1193,7 +1193,7 @@ body.hideScroll {
 }
 
 .card--tariffs .card__header {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.8rem;
 }
 
 .card--tariffs .card__title {
@@ -1568,7 +1568,8 @@ body.hideScroll {
 .content-box {
   padding: 0.7rem;
   font-weight: 500;
-  border: 1px solid #ffa494;
+  border: 1px solid #38b7ff;
+  line-height: 1.5;
   border-radius: 0.5rem;
   background-color: #FFFFFF;
 }
@@ -2318,6 +2319,10 @@ body.hideScroll {
   text-align: center;
 }
 
+.modal__content .card__field {
+  max-width: 100%;
+}
+
 .modal__img img {
   max-width: 10rem;
 }
@@ -2575,6 +2580,10 @@ body.hideScroll {
 
 .stages__card .card {
   height: 100%;
+}
+
+.stages__card .card__title {
+  min-height: 3.7rem;
 }
 
 .choose {
@@ -2856,7 +2865,7 @@ body.hideScroll {
   }
 
   .card__picture {
-    max-width: 6rem;
+    max-width: 9rem;
     margin: 0 auto;
   }
 

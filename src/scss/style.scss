@@ -272,6 +272,10 @@
 
         .card {
             height: 100%;
+
+            &__title {
+                min-height: 3.7rem;
+            }
         }
     }
 }

@@ -135,7 +135,7 @@ html, body {
         }
 
         .card__header {
-            margin-bottom: 3.5rem;
+            margin-bottom: 2.8rem;
 
             @media ($media_sm) {
                 margin-bottom: 1.5rem;
@@ -312,7 +312,7 @@ html, body {
 
     &__picture {
         @media ($media_sm) {
-            max-width: 6rem;
+            max-width: 9rem;
             margin: 0 auto;
         }
     }

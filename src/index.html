@@ -53,16 +53,24 @@
 								</div>
 								<div class="card__info">
 									<div class="card__picture">
-										<img class="imgMax" src="./img/tariffs-1.png" alt="Ракета">
+										<img class="imgMax" src="./img/tariffs-1-1.png" alt="Ракета">
 									</div>
 									<span class="card__price">от 20.000 ₽ </span>
 									<div class="card__btn">
-										<a href="#" class="btn btn--card">
+										<a class="btn btn--card" data-modal="modal_mail" data-formChangeTheme="Заявка с модалки ''Лэндинг''">
 											<span class="btn__text">ОФОРМИТЬ ЗАКАЗ</span>
 										</a>
 									</div>
-									<div class="card__detail">
-										ПОДРОБНЕЕ
+									<div class="dropdown dropdown--click">
+										<div class="dropdown__header card__detail">
+											ПОДРОБНЕЕ
+										</div>
+										<div class="dropdown__body dropdown__body--top" style="display: none;">
+											<div class="content-box">
+												Многостраничный сайт. Создание сайта с структурой из нескольких страниц, которые объединены 
+												меню или другими блоками с ссылками
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -77,16 +85,24 @@
 								</div>
 								<div class="card__info">
 									<div class="card__picture">
-										<img class="imgMax" src="./img/tariffs-2.png" alt="Ракета">
+										<img class="imgMax" src="./img/tariffs-2-1.png" alt="Молния">
 									</div>
 									<span class="card__price">от 25.000 ₽ </span>
 									<div class="card__btn">
-										<a href="#" class="btn btn--card">
+										<a class="btn btn--card" data-modal="modal_mail" data-formChangeTheme="Заявка с модалки ''Сайт-визитка''">
 											<span class="btn__text">ОФОРМИТЬ ЗАКАЗ</span>
 										</a>
 									</div>
-									<div class="card__detail">
-										ПОДРОБНЕЕ
+									<div class="dropdown dropdown--click">
+										<div class="dropdown__header card__detail">
+											ПОДРОБНЕЕ
+										</div>
+										<div class="dropdown__body dropdown__body--top" style="display: none;">
+											<div class="content-box">
+												Одностраничный сайт, призывающий пользователя к действию. Подписаться на рассылку, совершить покупку, 
+												запросить смету или скачать презентацию
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -101,16 +117,23 @@
 								</div>
 								<div class="card__info">
 									<div class="card__picture">
-										<img class="imgMax" src="./img/tariffs-3.png" alt="Ракета">
+										<img class="imgMax" src="./img/tariffs-3-1.png" alt="Огонь">
 									</div>
 									<span class="card__price">от 40.000 ₽ </span>
 									<div class="card__btn">
-										<a href="#" class="btn btn--card">
+										<a class="btn btn--card" data-modal="modal_mail" data-formChangeTheme="Заявка с модалки ''Лэндинг-PRO''">
 											<span class="btn__text">ОФОРМИТЬ ЗАКАЗ</span>
 										</a>
 									</div>
-									<div class="card__detail">
-										ПОДРОБНЕЕ
+									<div class="dropdown dropdown--click">
+										<div class="dropdown__header card__detail">
+											ПОДРОБНЕЕ
+										</div>
+										<div class="dropdown__body dropdown__body--top" style="display: none;">
+											<div class="content-box">
+												Сайт для продажи товаров с платежной системой, корзиной и уведомлением продавца и покупателя о заказе и доставке
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -364,6 +387,9 @@
 										<button class="card__input btn btn--form">
 											<span class="btn__text">Отправить заявку</span>
 										</button>
+									</div>
+									<div class="visually-hidden">
+										<input class="c-field__input" type="text" value="Заявка с секции ''Контакты''" required/>
 									</div>
 								</form>
 

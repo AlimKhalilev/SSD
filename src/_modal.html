@@ -1,20 +1,3 @@
-<div class="modal" id="modal_success">
-    <div class="modal__header">
-        <h2 class="modal__title">ЗАЯВКА СОЗДАНА</h2>
-    </div>
-    <div class="modal__close" data-closeModal>
-        <svg class='icon icon-close'><use xlink:href='img/sprite.svg#close'></use></svg>
-    </div>
-    <div class="modal__content">
-        <div class="modal__img">
-            <img src="./img/success_order.svg" alt="Иконка успешно отправленной заявки">
-        </div>
-        <p class="modal__text">
-            Мы свяжемся с вами в ближайшее время!
-        </p>
-    </div>
-</div>
-
 <div class="modal" id="modal_second">
     <div class="modal__header">
         <h2 class="blockTitle">Хей, это уже 2ая модалка!</h2>
@@ -46,6 +29,59 @@
         <div class="modal__button">
             <button class="btn btn--primary" data-closeModal>Окей</button>
         </div>
+    </div>
+</div>
+
+<div class="modal" id="modal_success">
+    <div class="modal__header">
+        <h2 class="modal__title">ЗАЯВКА СОЗДАНА</h2>
+    </div>
+    <div class="modal__close" data-closeModal>
+        <svg class='icon icon-close'><use xlink:href='img/sprite.svg#close'></use></svg>
+    </div>
+    <div class="modal__content">
+        <div class="modal__img">
+            <img src="./img/success_order.svg" alt="Иконка успешно отправленной заявки">
+        </div>
+        <p class="modal__text">
+            Мы свяжемся с вами в ближайшее время!
+        </p>
+    </div>
+</div>
+
+<div class="modal" id="modal_mail">
+    <div class="modal__header">
+        <h2 class="modal__title">Оставьте заявку</h2>
+    </div>
+    <div class="modal__close" data-closeModal>
+        <svg class='icon icon-close'><use xlink:href='img/sprite.svg#close'></use></svg>
+    </div>
+    <div class="modal__content">
+        <form class="card__form">
+            <div class="card__field">
+                <label class="card__input c-field">
+                    <input class="c-field__input" type="text" placeholder="Имя" required/>
+                </label>
+            </div>
+            <div class="card__field">
+                <label class="card__input c-field">
+                    <input class="c-field__input" type="email" placeholder="Email" required/>
+                </label>
+            </div>
+            <div class="card__field">
+                <label class="card__input c-field">
+                    <input class="c-field__input input_number" type="tel" placeholder="Телефон" required/>
+                </label>
+            </div>
+            <div class="card__field">
+                <button class="card__input btn btn--form">
+                    <span class="btn__text">Отправить заявку</span>
+                </button>
+            </div>
+            <div class="visually-hidden">
+                <input class="c-field__input themeFrom" type="text" value="Заявка с секции ''Контакты''" required/>
+            </div>
+        </form>
     </div>
 </div>
 

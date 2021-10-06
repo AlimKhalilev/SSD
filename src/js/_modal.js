@@ -58,7 +58,12 @@ function initModal() {
             },
             function (result) {
                 if (result) {
-                    showModal("modal_success");
+                    if (inputs[3].classList.contains("themeFrom")) { // если форма была отправлена с модалки
+                        changeModal("modal_success");
+                    }
+                    else {
+                        showModal("modal_success");
+                    }
                 }
                 else {
                     console.log("Ошибка соединения с сервером!");

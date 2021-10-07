@@ -29,8 +29,15 @@ function initModal() {
     }
     
     document.querySelectorAll("[data-modal]").forEach(item => {
+
         item.addEventListener("click", () => {
-            showModal(item.dataset.modal)
+            showModal(item.dataset.modal);
+
+            if (item.dataset.changeportfolio !== undefined) {
+                document.querySelector(".modal__portfolio img").setAttribute("src", "" + item.dataset.changeportfolio);
+                document.querySelector(".modal__portfolio source").setAttribute("srcset", item.dataset.changeportfolio.replace(/\.[^/.]+$/, ".webp"));
+                //console.log(item.dataset.changeportfolio);
+            }
         });
     });
 

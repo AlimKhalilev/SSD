@@ -2832,11 +2832,6 @@ body.hideScroll {
     width: 90%;
   }
 
-  .lSSlideOuter {
-    width: 85%;
-    margin: 0 auto;
-  }
-
   .lSAction > .lSPrev {
     left: -2.8rem;
   }
@@ -3004,10 +2999,6 @@ body.hideScroll {
     margin: 0;
   }
 
-  .header__logo--center .logo__icon {
-    max-width: unset;
-  }
-
   .header__controls {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3031,6 +3022,7 @@ body.hideScroll {
 
   .logo__icon {
     max-width: 3rem;
+    max-height: 3.5rem;
   }
 
   .menu {
@@ -3230,6 +3222,7 @@ body.hideScroll {
     width: 2.5rem;
     height: 2.5rem;
     background-size: 30%;
+    display: none;
   }
 
   .lSAction > .lSPrev {

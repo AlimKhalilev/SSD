@@ -419,11 +419,6 @@
 .lSSlideOuter {
     position: relative;
     overflow: visible;
-
-    @media ($media_sm) {
-        width: 85%;
-        margin: 0 auto;
-    }
 }
 
 .lSAction>a {
@@ -449,6 +444,8 @@
         width: 2.5rem;
         height: 2.5rem;
         background-size: 30%;
+
+        display: none;
     }
 
     &:hover {

@@ -60,10 +60,6 @@
 
                 .logo {
                     margin: 0;
-
-                    &__icon {
-                        max-width: unset;
-                    }
                 }
             }
         }
@@ -125,6 +121,7 @@
     &__icon {
         @media ($media_sm) {
             max-width: 3rem;
+            max-height: 3.5rem;
         }
     }
 }
